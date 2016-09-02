@@ -1,7 +1,7 @@
 package Game;
 
 public class Entity{
-  private int currentHealth,maxHealth,currentMana,maxManaspeed,posX,posY;
+  private int currentHealth,maxHealth,currentMana,maxMana,speed,crit,posX,posY;
   private String type;
   private Animation[] animations;
   
@@ -9,16 +9,18 @@ public class Entity{
     currentHealth=maxHealth=100;
     currentMana=maxMana=100;
     speed=1;
+    crit=1;
     posX=posY=0;
     type="NULL";
     animations=new Animation[10];
   }
-  public Entity(int currentHealth,int maxHealth,int currentMana,int maxMana, int speed, int posX, int posY, String type, Animation[] animations){
+  public Entity(int currentHealth,int maxHealth,int currentMana,int maxMana, int speed, int crit, int posX, int posY, String type, Animation[] animations){
     this.currentHealth=currentHealth;
     this.maxHealth=maxHealth;
     this.currentMana=currentMana;
     this.maxMana=maxMana;
     this.speed=speed;
+    this.crit=crit;
     this.posX=posX;
     this.posY=posY;
     this.type=type;
@@ -41,6 +43,9 @@ public class Entity{
   }
   public int getSpeed(){
     return speed;
+  }
+  public int getCrit(){
+    return crit;
   }
   public int getPosX(){
     return posX;
@@ -71,6 +76,9 @@ public class Entity{
   }
   public void setSpeed(int speed){
     this.speed;
+  }
+  public void setCrit(int crit){
+    this.crit=crit;
   }
   public void setPosX(int posX){
     this.posX=posX;
