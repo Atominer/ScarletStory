@@ -15,5 +15,9 @@ public abstract class Enemy extends Entity{
   }
   
   public abstract void act();
+  //For movement and standard attacks
+  
+  //For firing projectiles
+  public abstract Projectile act();
 
 }
